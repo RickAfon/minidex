@@ -1,0 +1,15 @@
+:root {
+    --primary-color: #e62914;
+    --secondary-color: #3f3b5c;
+    --dark-color: #161422;
+    --light-color: #EEEEEE;
+    --accent-color: ;
+    --alt-accent-color: ;
+    --alt-accent-color-darker: ;
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    font-family: Consolas;
+}

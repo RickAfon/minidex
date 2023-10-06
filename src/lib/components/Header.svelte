@@ -7,24 +7,26 @@
         <div class="filters">
             <div class="gen-selector">
                 <label for="region" class="region">Region</label>
-                <fieldset class="rg-filter-option">
-                    <input type="checkbox" name="region" id="rg-all" class=""><label for="rg-all">All</label>
-                </fieldset>
-                <fieldset class="rg-filter-option">
-                    <input type="checkbox" name="region" id="rg-kanto" class=""><label for="rg-kanto">Kanto</label>
-                </fieldset>
-                <fieldset class="rg-filter-option">
-                    <input type="checkbox" name="region" id="rg-johto" class=""><label for="rg-johto">Johto</label>
-                </fieldset>
-                <fieldset class="rg-filter-option">
-                    <input type="checkbox" name="region" id="rg-hoenn" class=""><label for="rg-hoenn">Hoenn</label>
-                </fieldset>
-                <fieldset class="rg-filter-option">
-                    <input type="checkbox" name="region" id="rg-sinnoh" class=""><label for="rg-sinnoh">Sinnoh</label>
-                </fieldset>
-                <fieldset class="rg-filter-option">
-                    <input type="checkbox" name="region" id="rg-unova" class=""><label for="rg-unova">Unova</label>
-                </fieldset>
+                <div class="gen-selector-sub">
+                    <fieldset class="rg-filter-option">
+                        <input type="checkbox" name="region" id="rg-all" class=""><label for="rg-all">All</label>
+                    </fieldset>
+                    <fieldset class="rg-filter-option">
+                        <input type="checkbox" name="region" id="rg-kanto" class=""><label for="rg-kanto">Kanto</label>
+                    </fieldset>
+                    <fieldset class="rg-filter-option">
+                        <input type="checkbox" name="region" id="rg-johto" class=""><label for="rg-johto">Johto</label>
+                    </fieldset>
+                    <fieldset class="rg-filter-option">
+                        <input type="checkbox" name="region" id="rg-hoenn" class=""><label for="rg-hoenn">Hoenn</label>
+                    </fieldset>
+                    <fieldset class="rg-filter-option">
+                        <input type="checkbox" name="region" id="rg-sinnoh" class=""><label for="rg-sinnoh">Sinnoh</label>
+                    </fieldset>
+                    <fieldset class="rg-filter-option">
+                        <input type="checkbox" name="region" id="rg-unova" class=""><label for="rg-unova">Unova</label>
+                    </fieldset>
+                </div>
             </div>
         </div>
         <div class="search">a</div>
@@ -46,6 +48,9 @@
         font-size: 3rem;
         background-color: red;
     }
+    .gen-selector {
+        min-width: 5rem;
+    }
     .gen-selector:hover {
         position: relative;
         display: block;
@@ -57,14 +62,18 @@
         justify-content: space-between;
         background-color: blue;
     }
-    .rg-filter-option {
+    .gen-selector-sub {
         display: none;
-        position: absolute;
+        min-width: inherit;
+        position: fixed;
         align-items: center;
     }
-    .gen-selector:hover>.rg-filter-option {
+    .gen-selector:hover>.gen-selector-sub {
         display: block;
         background-color: #2ddee4;
+    }
+    .rg-filter-option {
+        align-items: center;
     }
     .search {
         background-color: green;

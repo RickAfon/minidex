@@ -1,7 +1,8 @@
 <script lang="ts">
     
 </script>
-<header>
+
+<header class="header">
     <nav class="header-grid-container">
         <h1 class="logo">Minidex</h1>
         <div class="filters">
@@ -28,11 +29,38 @@
                     </fieldset>
                 </div>
             </div>
+            <div class="gen-selector">
+                <label for="region" class="region">Generation</label>
+                <div class="gen-selector-sub">
+                    <fieldset class="rg-filter-option">
+                        <a id="rg-all" class="">All</a>
+                    </fieldset>
+                    <fieldset class="rg-filter-option">
+                        <a id="rg-all" class="">Gen 1</a>
+                    </fieldset>
+                    <fieldset class="rg-filter-option">
+                        <a id="rg-all" class="">Gen 2</a>
+                    </fieldset>
+                    <fieldset class="rg-filter-option">
+                        <a id="rg-all" class="">Gen 3</a>
+                    </fieldset>
+                    <fieldset class="rg-filter-option">
+                        <a id="rg-all" class="">Gen 4</a>
+                    </fieldset>
+                    <fieldset class="rg-filter-option">
+                        <a id="rg-all" class="">Gen 5</a>
+                    </fieldset>
+                </div>
+            </div>
         </div>
         <div class="search">a</div>
     </nav>
 </header>
+
 <style>
+    .header {
+        height: 17.135%;
+    }
     .header-grid-container {
         background-color: #c02716;
         display: grid;
@@ -41,8 +69,8 @@
         align-items: center;
         justify-content: center;
         column-gap: 0.3rem;
-        min-height: 5.5rem;
-        padding: 0.5rem;
+        height: 84.63%;
+        padding: .5rem;
     }
     .logo {
         font-size: 3rem;
@@ -59,13 +87,13 @@
     }
     .filters {
         display: flex;
-        justify-content: space-between;
+        justify-content: left;
         background-color: blue;
     }
     .gen-selector-sub {
         display: none;
         min-width: inherit;
-        position: fixed;
+        position: absolute;
         align-items: center;
     }
     .gen-selector:hover>.gen-selector-sub {
